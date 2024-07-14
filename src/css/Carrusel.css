@@ -1,0 +1,10 @@
+.carrusel-container{
+    margin: 40px;
+}
+
+
+.carousel-item img {
+    height: 585px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
