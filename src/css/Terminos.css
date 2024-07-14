@@ -3,34 +3,34 @@
     margin-bottom: 2rem;
 }
 
-.card {
+#card-terms {
     margin-top: 1rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     transition: all 0.5s;
 }
 
-.card:hover{
+#card-terms:hover{
     transform: scale(1.08);
 }
-.card-title {
+#card-terms .card-title {
     background-color: #343a40;
     color: #ffffff;
     padding: 1rem;
     font-weight: bold;
 }
 
-.card-text {
+#card-terms .card-text {
     font-size: 1rem;
 }
 
 @media (max-width: 576px) { 
-    .card-text {
+    #card-terms .card-text {
         font-size: 0.9rem;
     }
 }
 
 @media (max-width: 360px) { 
-    .card-title {
+    #card-terms .card-title {
         font-size: 1.2rem;
     }
 }

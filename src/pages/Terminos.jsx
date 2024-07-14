@@ -6,7 +6,7 @@ function Terminos() {
         <div className="container my-5">
             <h1 className="display-4 text-center font-weight-bold">Políticas y Términos</h1>
 
-            <div className="card mt-4 shadow">
+            <div className="card mt-4 shadow" id='card-terms'>
                 <div className="card-body">
                     <h4 className="card-title bg-dark text-white p-2">Términos y Condiciones</h4>
                     <p className="card-text">
@@ -23,7 +23,7 @@ function Terminos() {
                 </div>
             </div>
 
-            <div className="card mt-4 shadow">
+            <div className="card mt-4 shadow" id='card-terms'>
                 <div className="card-body">
                     <h4 className="card-title bg-dark text-white p-2">Políticas de Protección de Datos</h4>
                     <p className="card-text">

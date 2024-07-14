@@ -10,7 +10,7 @@ const Footer = () => {
                         <a href="/nosotros" className="footer-link">Nosotros</a>
                     </div>
                     <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 py-3 text-center">
-                        <a href="/" className="footer-link">Contacto</a> 
+                        <a href="/contacto" className="footer-link">Contacto</a> 
                     </div>
                     <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 py-3 text-center">
                         <a href="/terminos" className="footer-link">Politica de Privacidad</a> 
