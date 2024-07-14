@@ -1,15 +1,19 @@
 .footer-link {
     color: #ffc107;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0px 10px;
     transition: color 0.3s ease;
+}
+
+.row {
+    margin-bottom: 40px;
 }
 
 .footer-link:hover {
     color: #fff;
 }
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
     .footer-link {
         display: block;
         margin: 5px 0;
