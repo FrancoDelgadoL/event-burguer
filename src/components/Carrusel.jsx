@@ -21,7 +21,7 @@ const Carrusel = () => {
                         <div className="carousel-caption top-0 mt-5 d-md-block">
                             <h1 className="fw-bold" style={{ fontSize: '60px' }}>Prueba ricas comidas</h1>
                             <p>Experimenta el sabor de la perfección con cada bocado.</p>
-                            <button className="btn btn-light rounded-5 px-5 py-2 fs-5 mt-5">Ordena Ya</button>
+                            <button className="btn btn-light rounded-5 px-5 py-2 fs-5 mt-5" onClick={() => window.location.href = '#menu'}>Ordena Ya</button>
                         </div>
                     </div>
                     <div className="carousel-item">
@@ -29,7 +29,7 @@ const Carrusel = () => {
                         <div className="carousel-caption top-0 mt-5 d-md-block">
                             <h1 className="fw-bold" style={{ fontSize: '60px' }}>Pruebe nuestros combos</h1>
                             <p>Obtén más por menos con nuestros deliciosos combos.</p>
-                            <button className="btn btn-light rounded-5 px-5 py-2 fs-5 mt-5">Ver Combos</button>
+                            <button className="btn btn-light rounded-5 px-5 py-2 fs-5 mt-5" onClick={() => window.location.href = '#combos'}>Ver Combos</button>
                         </div>
                     </div>
                     <div className="carousel-item">
@@ -37,7 +37,7 @@ const Carrusel = () => {
                         <div className="carousel-caption top-0 mt-5 d-md-block">
                             <h1 className="fw-bold" style={{ fontSize: '60px' }}>Ofertas unicas solo para ti</h1>
                             <p>Aprovecha nuestras ofertas y descuentos exclusivos.</p>
-                            <button className="btn btn-light rounded-5 px-5 py-2 fs-5 mt-5">Ver ofertas</button>
+                            <button className="btn btn-light rounded-5 px-5 py-2 fs-5 mt-5" onClick={() => window.location.href = '#promociones'}>Ver ofertas</button>
                         </div>
                     </div>
                 </div>

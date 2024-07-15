@@ -12,8 +12,8 @@ const Navbar = () => {
             <nav className="navbar">
                 <ul className="nav-menu">
                     <li className="nav-item"><a href="#menu"> MENU</a></li>
-                    <li className="nav-item"><a href="">COMBOS</a></li>
-                    <li className="nav-item"><a href="">PROMOCIONES</a></li>
+                    <li className="nav-item"><a href="#combos">COMBOS</a></li>
+                    <li className="nav-item"><a href="#promociones">PROMOCIONES</a></li>
                     <li className="nav-item carrito"><a href="">CARRITO</a></li>
                 </ul>
             </nav>
