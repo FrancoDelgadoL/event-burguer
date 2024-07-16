@@ -1,18 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import '../css/CardSectionTitulo.css';
+import Error from '../components/Error'
+import Loader from '../components/Loader'
 
 const CardSectionPromocion = () => {
     const [promociones, setPromociones] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         fetch('http://localhost:3000/promociones')
-            .then(response => response.json())
-            .then(data => setPromociones(data))
-            .catch(error => console.error('Error fetching promociones:', error));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                setPromociones(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching promociones:', error);
+                setError(true);
+                setLoading(false);
+            });
     }, []);
 
+    if (loading) {
+        return <Loader />;
+    }
+
+    if (error) {
+        return <Error  message="Error al cargar las PROMOCIONES." />;
+    }
+
     return (
-        <>
+        <div>
             <div className="text-center mt-5">
                 <h1 className="title-page" id='promociones'>Aprovecha Nuestras Promociones</h1>
                 <p className="subtitle fs-5">Promociones irresistibles para ti</p>
@@ -34,7 +58,7 @@ const CardSectionPromocion = () => {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 

@@ -1,15 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import '../css/CardSectionTitulo.css';
+import Error from '../components/Error'
+import Loader from '../components/Loader'
 
 const CardSectionCombos = () => {
     const [combos, setCombos] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         fetch('http://localhost:3000/combos')
-            .then(response => response.json())
-            .then(data => setCombos(data))
-            .catch(error => console.error('Error fetching combos:', error));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                setCombos(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching combos:', error);
+                setError(true);
+                setLoading(false);
+            });
     }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
+
+    if (error) {
+        return <Error message="Error al cargar las COMBOS." />;
+    }
 
     return (
         <>

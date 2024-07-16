@@ -1,15 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import '../css/CardSectionTitulo.css';
+import Error from '../components/Error'
+import Loader from '../components/Loader'
 
 const CardSectionTitulo = () => {
     const [menus, setMenus] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+
 
     useEffect(() => {
         fetch('http://localhost:3000/menus')
-            .then(response => response.json())
-            .then(data => setMenus(data))
-            .catch(error => console.error('Error fetching menus:', error));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                setMenus(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching menus:', error);
+                setError(true);
+                setLoading(false);
+            });
     }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
+
+    if (error) {
+        return <Error message="Error al cargar el MENÚ." />;
+    }
 
     return (
         <>
