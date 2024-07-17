@@ -15,7 +15,7 @@ function Contacto() {
             text: "Muchas gracias por tu mensaje! Agradecemos tu contacto!",
             icon: "success"
         });
-        formRef.current.reset(); // Resetea el formulario
+        formRef.current.reset(); 
     };
 
     return (
