@@ -9,6 +9,8 @@ import Inicio from './pages/inicio'
 import Terminos from './pages/Terminos'
 import Nosotros from './pages/Nosotros'
 import Contacto from "./pages/Contacto";
+import Cart from './pages/Cart'
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/terminos" element={<Terminos />} />
           <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/carrito" element={<Cart />} />
       </Routes>
 
 

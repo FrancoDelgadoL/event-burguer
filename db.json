@@ -1,28 +1,28 @@
 {
     "menus": [
         {
-            "id": 1,
+            "id": 1364,
             "name": "Cheese Burger",
             "description": "Hamburguesa con queso, lechuga, tomate y salsa especial.",
             "price": 19.90,
             "image": "/img/cheeseburger.jpg"
         },
         {
-            "id": 2,
+            "id": 2954,
             "name": "Royal Burger",
             "description": "Hamburguesa con queso, lechuga, tomate, bacon y salsa BBQ.",
             "price": 22.90,
             "image": "/img/royalburger.jpg"
         },
         {
-            "id": 3,
+            "id": 3843,
             "name": "Burger Clásica",
             "description": "Hamburguesa clásica con lechuga, tomate y mayonesa.",
             "price": 16.90,
             "image": "/img/clasicahamburguesa.jpg"
         },
         {
-            "id": 4,
+            "id": 7364,
             "name": "Burger Doble Carne",
             "description": "Hamburguesa con doble carne, queso, lechuga, tomate y salsa especial.",
             "price": 26.90,
@@ -31,21 +31,21 @@
     ],
     "combos": [
         {
-            "id": 1,
+            "id": 9423,
             "name": "Combo Clásico",
             "description": "Hamburguesa Clásica, papas fritas y bebida.",
             "price": 29.90,
             "image": "/img/combo1.jpg"
         },
         {
-            "id": 2,
+            "id": 1301,
             "name": "Combo BBQ",
             "description": "Hamburguesa BBQ, aros de cebolla y bebida.",
             "price": 34.90,
             "image": "/img/combo2.jpg"
         },
         {
-            "id": 3,
+            "id": 8715,
             "name": "Combo Vegano",
             "description": "Hamburguesa Vegana, ensalada y bebida.",
             "price": 39.90,
@@ -54,28 +54,28 @@
     ],
     "promociones": [
         {
-            "id": 1,
+            "id": 5413,
             "name": "2x1 en Burgers",
             "description": "En esta promo realiza la compra de una hamburguesa y llévate otra gratis.",
             "price": 19.90,
             "image": "/img/promo1.jpg"
         },
         {
-            "id": 2,
+            "id": 7451,
             "name": "Promo Familiar",
             "description": "3 Hamburguesas Clásicas, 2 porciones de papas fritas y 3 bebidas.",
             "price": 45.90,
             "image": "/img/promo2.jpg"
         },
         {
-            "id": 3,
+            "id": 3126,
             "name": "Combo Estudiante",
             "description": "Mini hamburguesa, papas pequeñas y refresco a precio especial.",
             "price": 12.90,
             "image": "/img/promo3.jpg"
         },
         {
-            "id": 4,
+            "id": 4361,
             "name": "Martes de Amigos",
             "description": "Disfruta con tus amigos 4 hamburguesas por el precio de 3.",
             "price": 24.90,

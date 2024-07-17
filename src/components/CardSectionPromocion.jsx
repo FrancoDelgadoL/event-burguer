@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/CardSectionTitulo.css';
-import Error from '../components/Error'
-import Loader from '../components/Loader'
+import Error from '../components/Error';
+import Loader from '../components/Loader';
 
 const CardSectionPromocion = () => {
     const [promociones, setPromociones] = useState([]);
@@ -27,12 +27,25 @@ const CardSectionPromocion = () => {
             });
     }, []);
 
+    const addToCart = (promocion) => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItemIndex = cart.findIndex(item => item.id === promocion.id);
+
+        if (existingItemIndex !== -1) {
+            cart[existingItemIndex].quantity += 1;
+        } else {
+            cart.push({ ...promocion, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    };
+
     if (loading) {
         return <Loader />;
     }
 
     if (error) {
-        return <Error  message="Error al cargar las PROMOCIONES." />;
+        return <Error message="Error al cargar las PROMOCIONES." />;
     }
 
     return (
@@ -52,7 +65,7 @@ const CardSectionPromocion = () => {
                                 <h3 className='mt-4'>S/.{promocion.price.toFixed(2)}</h3>
                             </div>
                             <div className="mb-5 d-flex justify-content-center">
-                                <button className="btn btn-primary">Añadir al carrito</button>
+                                <button className="btn btn-primary" id='buton-burgers' onClick={() => addToCart(promocion)}>Añadir al carrito</button>
                             </div>
                         </div>
                     </div>

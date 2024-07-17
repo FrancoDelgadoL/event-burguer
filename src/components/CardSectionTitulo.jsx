@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../css/CardSectionTitulo.css';
-import Error from '../components/Error'
-import Loader from '../components/Loader'
+import Error from '../components/Error';
+import Loader from '../components/Loader';
 
 const CardSectionTitulo = () => {
     const [menus, setMenus] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
-
 
     useEffect(() => {
         fetch('http://localhost:3000/menus')
@@ -27,6 +26,19 @@ const CardSectionTitulo = () => {
                 setLoading(false);
             });
     }, []);
+
+    const addToCart = (menu) => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItemIndex = cart.findIndex(item => item.id === menu.id);
+
+        if (existingItemIndex !== -1) {
+            cart[existingItemIndex].quantity += 1;
+        } else {
+            cart.push({ ...menu, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    };
 
     if (loading) {
         return <Loader />;
@@ -53,7 +65,7 @@ const CardSectionTitulo = () => {
                                 <h3 className='mt-4'>S/.{menu.price.toFixed(2)}</h3>
                             </div>
                             <div className="mb-5 d-flex justify-content-center">
-                                <button className="btn btn-primary">Añadir al carrito</button>
+                                <button className="btn btn-primary" id='buton-burgers' onClick={() => addToCart(menu)}>Añadir al carrito</button>
                             </div>
                         </div>
                     </div>

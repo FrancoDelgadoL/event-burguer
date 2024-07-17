@@ -1,0 +1,44 @@
+.container {
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#cart-state{
+    color: red;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    font-weight: bold !important;
+
+}
+.rounded-4 {
+    width: 77%;
+    height: auto;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.form-label {
+    color: #fff;
+}
+
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 80%; 
+}
